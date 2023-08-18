@@ -10,7 +10,7 @@ $(document).ready(function () {
             url: "add_offer.php",
             data: {name: name, price: price, location: l0cation, area: area},
             success: function (response) {
-
+                alert('Done')
             }
         });
     })
