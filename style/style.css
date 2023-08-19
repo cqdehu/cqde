@@ -35,3 +35,7 @@ body {
 .rate {
     color: #34B894;
 }
+
+.btn-outline-light:hover {
+    background:#071813
+}

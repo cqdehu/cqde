@@ -26,6 +26,13 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function () {
-    $('#search-modal').modal('show')
-});
+
+$(document).ready(function() {
+    $("#searchInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#itemList li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+      });
+    });
+  });
+  
