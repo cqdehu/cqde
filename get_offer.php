@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
         echo '<p class="p-0 m-0 fs-4 text-start name">' . $row["name"] . '</p>';
         echo '</div>';
         echo '<div class="col p-0 m-0">';
-        echo '<p class="p-0 m-0 fs-4 text-end price">' . $row["price"] . '</p>';
+        echo '<p class="p-0 m-0 fs-4 text-end price">' . $row["price"] . ' Ft</p>';
         echo '</div>';
         echo '</div>';
         echo '<div class="row pt-1">';
