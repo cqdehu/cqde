@@ -28,20 +28,26 @@ $(document).ready(function () {
 
 
 $(document).ready(function() {
-  $("#searchInput").on("keyup", function() {
-    var searchTerm = $(this).val().toLowerCase();
-
-    $("#offers .col").each(function() {
-      var itemName = $(this).find(".name").text().toLowerCase();
-      var itemLocation = $(this).find(".location").text().toLowerCase();
-
-      if (itemName.includes(searchTerm) || itemLocation.includes(searchTerm)) {
-        $(this).show();
-      } else {
-        $(this).hide();
+    $("#searchInput").on("keyup", function() {
+      var searchTerm = $(this).val().toLowerCase();
+  
+      $("#offers .col").each(function() {
+        var itemName = $(this).find(".name").text().toLowerCase();
+        var itemLocation = $(this).find(".location").text().toLowerCase();
+  
+        if (itemName.includes(searchTerm) || itemLocation.includes(searchTerm)) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+  
+      // Ha nincs keresőkifejezés, megjelenítjük az összes elemet
+      if (!searchTerm) {
+        $("#offers .col").show();
       }
     });
   });
-});
+  
 
   
