@@ -16,20 +16,4 @@ $(document).ready(function () {
     });
 });
 
-function longPolling() {
-    $.ajax({
-        type: "GET",
-        url: "get_offer.php",
-        success: function (response) {
-            $('#offers').html(response);
-            longPolling(); // Újraindítjuk a long polling ciklust
-        },
-        complete: function () {
-            setTimeout(longPolling, 1000); // Várunk egy időt és újraindítjuk a kérést
-        }
-    });
-}
 
-$(document).ready(function () {
-    longPolling(); // Elindítjuk a long polling ciklust
-});
