@@ -31,7 +31,7 @@ $(document).ready(function() {
     $("#searchInput").on("keyup", function() {
       var searchTerm = $(this).val().toLowerCase();
   
-      $("#offers .card").each(function() {
+      $("#offers .col.p-0.m-0").each(function() {
         var itemName = $(this).find(".name").text().toLowerCase();
         var itemLocation = $(this).find(".location").text().toLowerCase();
   
@@ -42,5 +42,6 @@ $(document).ready(function() {
         }
       });
     });
-  });  
+  });
+  
   
