@@ -31,7 +31,7 @@ $(document).ready(function () {
         type: "GET",
         url: "test_get.php",
         success: function (response) {
-            console.log(response)
+            $('#list').html(response)
         }
     });
 });

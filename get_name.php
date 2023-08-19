@@ -15,10 +15,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo $row['rate'];
-        echo mb_strtoupper($row["name"],'UTF-8');
-        echo $row["price"];
-        echo $row["area"];
+        echo '<option value="">'. mb_strtoupper($row["name"],'UTF-8') .'</option>';
     }
 } else {
     echo "Nincsenek adatok.";
