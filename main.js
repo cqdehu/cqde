@@ -25,3 +25,7 @@ $(document).ready(function () {
         }
     });
 });
+
+$(document).ready(function () {
+    $('#search-modal').modal('show')
+});
