@@ -28,9 +28,9 @@ $(document).ready(function () {
 
 
 $(document).ready(function() {
-    $("#searchInput").on("keyup", function() {
+    $("#offers").on("keyup", function() {
       var value = $(this).val().toLowerCase();
-      $("#itemList li").filter(function() {
+      $(".col").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
       });
     });
