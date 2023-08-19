@@ -16,13 +16,13 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo '<div class="col p-0 m-0">';
-        echo '<div class="card rounded-4 border-0">';
+        echo '<div class="card rounded-5 border-0">';
         echo '<span class="position-relative">';
         echo '<span class="position-absolute top-0 end-0">';
         echo '<span class="badge rate-bg rate m-3 px-3 fs-6 rounded-4">' . $row['rate'] . '</span>';
         echo '</span>';
         echo '</span>';
-        echo '<img src="/src/img.png" alt="" class="rounded-top-4 border-0">';
+        echo '<img src="/src/img.png" alt="" class="rounded-top-5 border-0">';
         echo '<div class="card-body">';
         echo '<div class="container">';
         echo '<div class="row">';
