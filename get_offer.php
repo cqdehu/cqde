@@ -12,6 +12,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "SELECT * FROM school";
+$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
@@ -24,3 +25,6 @@ if ($result->num_rows > 0) {
 } else {
     echo "Nincsenek adatok.";
 }
+
+$conn->close();
+?>
