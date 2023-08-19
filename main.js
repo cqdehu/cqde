@@ -31,7 +31,7 @@ $(document).ready(function() {
     $("#searchInput").on("keyup", function() {
       var searchTerm = $(this).val().toLowerCase();
   
-      $("#offers .card .col.p-0.m-0").each(function() {
+      $("#offers .card").each(function() {
         var itemName = $(this).find(".name").text().toLowerCase();
         var itemLocation = $(this).find(".location").text().toLowerCase();
   
