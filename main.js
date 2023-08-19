@@ -25,15 +25,3 @@ $(document).ready(function () {
         }
     });
 });
-
-const eventSource = new EventSource("sse.php");
-
-eventSource.onmessage = function (event) {
-    const eventData = JSON.parse(event.data);
-    const resultDiv = document.getElementById("offers");
-    resultDiv.innerHTML = eventData.message;
-};
-
-eventSource.onerror = function (error) {
-    console.error("SSE error:", error);
-};

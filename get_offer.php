@@ -1,5 +1,4 @@
 <?php
-
 $servername = "localhost";
 $username = "u142909563_LEAdmin";
 $password = "LEadmin23";
@@ -16,11 +15,31 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo "Name: " . $row["name"] . "<br>";
-        echo "Price: " . $row["price"] . "<br>";
-        echo "Location: " . $row["location"] . "<br>";
-        echo "Area: " . $row["area"] . "<br>";
-        echo "<hr>";
+        echo '<div class="col p-0 m-0">';
+        echo '<div class="card rounded-4 border-0">';
+        echo '<img src="/src/img.png" alt="" class="rounded-top-4 border-0">';
+        echo '<div class="card-body">';
+        echo '<div class="container">';
+        echo '<div class="row">';
+        echo '<div class="col p-0 m-0">';
+        echo '<p class="p-0 m-0 fs-4 text-start name">' . $row["name"] . '</p>';
+        echo '</div>';
+        echo '<div class="col p-0 m-0">';
+        echo '<p class="p-0 m-0 fs-4 text-end price">' . $row["price"] . '</p>';
+        echo '</div>';
+        echo '</div>';
+        echo '<div class="row pt-1">';
+        echo '<div class="col p-0 m-0">';
+        echo '<p class="p-0 m-0 fs-6 text-start location">' . $row["location"] . '</p>';
+        echo '</div>';
+        echo '<div class="col p-0 m-0">';
+        echo '<p class="p-0 m-0 fs-6 text-end area">' . $row["area"] . '</p>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
     }
 } else {
     echo "Nincsenek adatok.";
