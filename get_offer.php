@@ -17,6 +17,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "Name: " . $row["name"] . "<br>";
+        echo "Price: " . $row["price"] . "<br>";
+        echo "Location: " . $row["location"] . "<br>";
+        echo "Area: " . $row["area"] . "<br>";
         echo "<hr>";
     }
 } else {
