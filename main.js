@@ -29,7 +29,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $.ajax({
         type: "GET",
-        url: "test_get.php",
+        url: "get_name.php",
         success: function (response) {
             $('#list').html(response)
         }
