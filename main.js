@@ -31,23 +31,27 @@ $(document).ready(function() {
     $("#searchInput").on("keyup", function() {
       var searchTerm = $(this).val().toLowerCase();
   
-      $("#offers .col").each(function() {
+      $("#offers .card").each(function() {
         var itemName = $(this).find(".name").text().toLowerCase();
         var itemLocation = $(this).find(".location").text().toLowerCase();
   
         if (itemName.includes(searchTerm) || itemLocation.includes(searchTerm)) {
-          $(this).show();
+          $(this).parent().show(); // Megjelenítjük a tartalmazó .col elemet
+          $(this).show(); // Megjelenítjük a .card elemet
         } else {
-          $(this).hide();
+          $(this).parent().hide(); // Elrejtjük a tartalmazó .col elemet
+          $(this).hide(); // Elrejtjük a .card elemet
         }
       });
   
-      // Ha nincs keresőkifejezés, megjelenítjük az összes elemet
+      // Ha nincs keresőkifejezés, megjelenítjük az összes .card elemet
       if (!searchTerm) {
-        $("#offers .col").show();
+        $("#offers .card").parent().show();
+        $("#offers .card").show();
       }
     });
   });
+  
   
 
   
