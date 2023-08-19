@@ -16,7 +16,12 @@ $(document).ready(function () {
     });
 });
 
-//setInterval(function () {
-//    var name = $('#name_input').val()
-//    console.log(name)
-//}, 1000);
+$(document).ready(function () {
+    $.ajax({
+        type: "GET",
+        url: "get_offer.php",
+        success: function (response) {
+            $('#result').html(response);
+        }
+    });
+});

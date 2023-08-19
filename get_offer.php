@@ -1,0 +1,26 @@
+<?php
+
+$servername = "localhost";
+$username = "u142909563_LEAdmin";
+$password = "LEadmin23";
+$dbname = "u142909563_LEARN";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Kapcsolódási hiba: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM school";
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo "Name: " . $row["name"] . "<br>";
+        echo "Price: " . $row["price"] . "<br>";
+        echo "Location: " . $row["location"] . "<br>";
+        echo "Area: " . $row["area"] . "<br>";
+        echo "<hr>";
+    }
+} else {
+    echo "Nincsenek adatok.";
+}
