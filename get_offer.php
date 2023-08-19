@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Kapcsolódási hiba: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM school";
+$sql = "SELECT * FROM `school`";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
