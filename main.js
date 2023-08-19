@@ -28,10 +28,18 @@ $(document).ready(function () {
 
 
 $(document).ready(function() {
-    $("#offers").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $(".col").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    $("#searchInput").on("keyup", function() {
+      var searchTerm = $(this).val().toLowerCase();
+  
+      $("#offers .card").each(function() {
+        var itemName = $(this).find(".name").text().toLowerCase();
+        var itemLocation = $(this).find(".location").text().toLowerCase();
+  
+        if (itemName.includes(searchTerm) || itemLocation.includes(searchTerm)) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
       });
     });
   });
