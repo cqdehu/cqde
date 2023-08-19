@@ -2,6 +2,10 @@ body {
     background: #0B2820;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .card {
     background: #071813;
 }
