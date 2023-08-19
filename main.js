@@ -21,7 +21,7 @@ $(document).ready(function () {
         type: "GET",
         url: "get_offer.php",
         success: function (response) {
-            $('#result').html(response);
+            $('#offers').html(response);
         }
     });
 });
