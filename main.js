@@ -16,23 +16,24 @@ $(document).ready(function () {
     });
 });
 
-function longPolling() {
+$(document).ready(function () {
     $.ajax({
         type: "GET",
         url: "get_offer.php",
         success: function (response) {
             $('#offers').html(response);
-            longPolling(); // Újraindítjuk a long polling ciklust
-        },
-        complete: function () {
-            setTimeout(longPolling, 1000); // Várunk egy időt és újraindítjuk a kérést
         }
     });
-}
-
-$(document).ready(function () {
-    longPolling(); // Elindítjuk a long polling ciklust
 });
 
+const eventSource = new EventSource("sse.php");
 
+eventSource.onmessage = function (event) {
+    const eventData = JSON.parse(event.data);
+    const resultDiv = document.getElementById("offers");
+    resultDiv.innerHTML = eventData.message;
+};
 
+eventSource.onerror = function (error) {
+    console.error("SSE error:", error);
+};
