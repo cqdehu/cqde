@@ -66,6 +66,7 @@ function delete_offer() {
 
     list.change(function () {
         selected_offer = $(this).val();
+        console.log(selected_offer)
     });
 
     $('#delete_offer_btn').click(function () {
@@ -90,7 +91,7 @@ $(document).ready(function () {
     $(document).on("click", ".offer", function () {
         var id = $(this).attr("id");
         
-        
+
     });
 });
 //
