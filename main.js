@@ -65,6 +65,7 @@ var selected_offer = ""; // Változó deklaráció
 
 list.change(function () {
     selected_offer = $(this).val();
+    console.log(selected_offer)
 });
 
 $('#delete_offer_btn').click(function () {
