@@ -51,7 +51,14 @@ $(document).ready(function () {
     });
 
     $('#delete_offer_btn').click(function() {
-        console.log(selected_offer);
+        $.ajax({
+            type: "POST",
+            url: "",
+            data: { name: selected_offer},
+            success: function (response) {
+                console.log(response)
+            }
+        });
     });
 });
 //
