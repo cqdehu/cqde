@@ -102,7 +102,7 @@ $(document).ready(function () {
                 }
             });
         } else {
-            toast("Válassz egy ajánlatot!", "info")
+            toast("Válassz egy ajánlatot!", "danger")
         }
     });
 });
