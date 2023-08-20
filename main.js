@@ -1,3 +1,13 @@
+$(document).ready(function get_offer() {
+    $.ajax({
+        type: "GET",
+        url: "get_offer.php",
+        success: function (response) {
+            $('#offers').html(response);
+        }
+    });
+});
+
 $(document).ready(function () {
     $('#add_button').click(function () {
         var name = $('#name_input').val();
@@ -15,17 +25,6 @@ $(document).ready(function () {
         });
     });
 });
-
-$(document).ready(function get_offer() {
-    $.ajax({
-        type: "GET",
-        url: "get_offer.php",
-        success: function (response) {
-            $('#offers').html(response);
-        }
-    });
-});
-
 
 //
 $(document).ready(function () {
