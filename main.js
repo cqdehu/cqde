@@ -61,10 +61,10 @@ function get_offer_name() {
 
 //
 function delete_offer() {
-    var list = $('#list');
+    var delete_list = $('#delete_list');
     var selected_offer = ""; // Változó deklaráció
 
-    list.change(function () {
+    delete_list.change(function () {
         selected_offer = $(this).val();
         console.log(selected_offer)
     });
