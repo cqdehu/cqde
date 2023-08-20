@@ -4,7 +4,7 @@ const uuid = require('uuid');
 $(document).ready(function () {
     $('#add_button').click(function () {
 
-        var id = uuid.v4();
+        var id = uuidv4();
 
         var name = $('#name_input').val();
         var price = $('#price_input').val();
