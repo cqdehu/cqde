@@ -59,7 +59,7 @@ function get_offer_name() {
 };
 //
 
-//
+// Delete Offer
 
 $(document).ready(function () {
     var list = $('#list')
@@ -71,18 +71,21 @@ $(document).ready(function () {
     });
 
     $('#delete_offer_btn').click(function () {
-        console.log(selected_offer);
-        $.ajax({
-            type: "POST",
-            url: "delete_offer.php",
-            data: { name: selected_offer }, // Itt a nevet definiálod, nem selected_offer
-            success: function (response) {
-                console.log(response);
-                get_offer()
-                get_offer_name()
-                toast(selected_offer + "sikeresen el lett távolítva!")
-            }
-        });
+        if (selected_offer !== "") {
+            $.ajax({
+                type: "POST",
+                url: "delete_offer.php",
+                data: { name: selected_offer }, // Itt a nevet definiálod, nem selected_offer
+                success: function (response) {
+                    console.log(response);
+                    get_offer()
+                    get_offer_name()
+                    toast(selected_offer + "sikeresen el lett távolítva!")
+                }
+            });
+        } else {
+            toast("Válassz egy ajánlatot!")
+        }
     });
 });
 
@@ -91,7 +94,7 @@ $(document).ready(function () {
 
 //
 
-//
+// Select Offer
 $(document).ready(function () {
     $(document).on("click", ".offer", function () {
         var id = $(this).attr("id");
