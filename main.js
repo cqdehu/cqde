@@ -61,10 +61,9 @@ function get_offer_name() {
 //
 
 $(document).ready(function () {
-    var list = $('#list');
-    var selected_offer = "" // Változó deklaráció és inicializáció
+    var selected_offer = $('#list').val() // Változó deklaráció és inicializáció
 
-    list.change(function () {
+    $('#list').change(function () {
         selected_offer = $(this).val();
         console.log(selected_offer);
     });
