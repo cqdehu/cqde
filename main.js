@@ -2,13 +2,16 @@ $(document).ready(function () {
     $('#add_button').click(function () {
         var name = $('#name_input').val();
         var price = $('#price_input').val();
+        var description = $('#description_input')
         var location = $('#location_input').val();
         var area = $('#area_input').val();
+        var rent = $('#rent_input')
+        var cost = $('#cost_input')
 
         $.ajax({
             type: "POST",
             url: "add_offer.php",
-            data: { name: name, price: price, location: location, area: area },
+            data: { name: name, price: price, description: description, location: location, area: area, rent: rent, cost: cost },
             success: function (response) {
                 get_offer()
                 get_offer_name()
