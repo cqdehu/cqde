@@ -17,6 +17,7 @@ $(document).ready(function () {
                 success: function (response) {
                     get_offer();
                     get_offer_name();
+                    toast("Ajánlat sikeresen létrehozva!")
                 }
             });
         } else {
@@ -122,11 +123,5 @@ function toast(text) {
 
 
 //
-
-toast("Hello World")
-
-toast("2")
-
-toast("3")
 
 
