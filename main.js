@@ -30,7 +30,6 @@ $(document).ready(function () {
 $(document).ready(function () {
     get_offer()
     get_offer_name()
-    delete_offer()
 });
 //
 
