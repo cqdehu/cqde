@@ -108,7 +108,7 @@ function toast(text) {
         url: "get_toast.php",
         data: {text: text},
         success: function (response) {
-            $('.toast-container').html(response)
+            $('.toast-container').append(response)
         }
     });
 }
