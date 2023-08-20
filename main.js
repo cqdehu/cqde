@@ -10,13 +10,13 @@ $(document).ready(function () {
             url: "add_offer.php",
             data: { name: name, price: price, location: location, area: area },
             success: function (response) {
-                alert('Done');
+                get_offer()
             }
         });
     });
 });
 
-$(document).ready(function () {
+$(document).ready(function get_offer() {
     $.ajax({
         type: "GET",
         url: "get_offer.php",
