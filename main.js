@@ -52,7 +52,7 @@ function get_offer_name() {
         type: "GET",
         url: "get_offer_name.php",
         success: function (response) {
-            $('#delete_list').html(response)
+            $('#list').html(response)
         }
     });
 };
