@@ -17,7 +17,7 @@ $(document).ready(function () {
                 success: function (response) {
                     get_offer();
                     get_offer_name();
-                    toast(name + " sikeresen létrehozva!")
+                    toast(name + "ajánlat sikeresen létrehozva!")
                 }
             });
         } else {
@@ -80,7 +80,7 @@ $(document).ready(function () {
                     console.log(response);
                     get_offer()
                     get_offer_name()
-                    toast(selected_offer + " sikeresen el lett távolítva!")
+                    toast(selected_offer + "ajánlat sikeresen el lett távolítva!")
                 }
             });
         } else {
