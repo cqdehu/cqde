@@ -22,18 +22,18 @@ if ($result->num_rows > 0) {
                     <div class="container">
                         <div class="row">
                             <div class="col p-0 m-0">
-                                <p class="p-0 m-0 fs-4 text-start name"><?php $row['name']?></p>
+                                <p class="p-0 m-0 fs-4 text-start name"><?php echo $row['name']?></p>
                             </div>
                             <div class="col p-0 m-0">
-                                <p class="p-0 m-0 fs-4 text-end price"><?php $row['price']?> Ft</p>
+                                <p class="p-0 m-0 fs-4 text-end price"><?php echo $row['price']?> Ft</p>
                             </div>
                         </div>
                         <div class="row pt-2">
                             <div class="col p-0 m-0">
-                                <p class="p-0 m-0 fs-6 text-start location"><?php $row['location']?></p>
+                                <p class="p-0 m-0 fs-6 text-start location"><?php echo $row['location']?></p>
                             </div>
                             <div class="col p-0 m-0">
-                                <p class="p-0 m-0 fs-6 text-end area"><?php $row['area']?><sup>2</sup></p>
+                                <p class="p-0 m-0 fs-6 text-end area"><?php echo $row['area']?><sup>2</sup></p>
                             </div>
                         </div>
                     </div>
