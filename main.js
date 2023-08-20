@@ -99,4 +99,22 @@ $(document).ready(function () {
 });
 //
 
+// Toast
+
+function toast(text) {
+    
+    $.ajax({
+        type: "POST",
+        url: "get_tost.php",
+        data: {text: text},
+        success: function (response) {
+            $('.toast-container').html(response)
+        }
+    });
+}
+
+//
+
+toast("Hello World")
+
 

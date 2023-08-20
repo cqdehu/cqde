@@ -14,7 +14,7 @@ body {
     display: none;
 }
 
-.card {
+.card, .toast-header {
     background: #071813;
 }
 
