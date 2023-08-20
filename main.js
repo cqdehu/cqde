@@ -1,6 +1,11 @@
+const uuid = require('uuid');
+
 // ADD OFFER
 $(document).ready(function () {
     $('#add_button').click(function () {
+
+        var id = uuid.v4();
+
         var name = $('#name_input').val();
         var price = $('#price_input').val();
         var description = $('#description_input').val();
@@ -17,11 +22,24 @@ $(document).ready(function () {
             $.ajax({
                 type: "POST",
                 url: "add_offer.php",
-                data: { name: name, price: price, description: description, location: location, area: area, rate: rate, person: person, room: room, bed: bed, rent: rent, cost: cost },
+                data: {
+                    id: id,
+                    name: name,
+                    price: price,
+                    description: description,
+                    location: location,
+                    area: area,
+                    rate: rate,
+                    person: person,
+                    room: room,
+                    bed: bed,
+                    rent: rent,
+                    cost: cost
+                },
                 success: function (response) {
                     get_offer();
                     get_offer_name();
-                    toast(name + "ajánlat sikeresen létrehozva!", "success")
+                    toast(name + " ajánlat sikeresen létrehozva!", "success")
                 }
             });
         } else {
@@ -116,7 +134,7 @@ var toast_count = 0;
 function toast(text, color) {
     toast_count++;
 
-    if (color=='') {
+    if (color == '') {
         color = "dark"
     }
 
