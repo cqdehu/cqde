@@ -53,7 +53,7 @@ $(document).ready(function () {
     $('#delete_offer_btn').click(function() {
         $.ajax({
             type: "POST",
-            url: "",
+            url: "delete_offer.php",
             data: { name: selected_offer},
             success: function (response) {
                 console.log(response)
