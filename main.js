@@ -109,7 +109,7 @@ function toast(text) {
     $.ajax({
         type: "POST",
         url: "get_toast.php",
-        data: { text: text, id: toast_count },
+        data: { text: text, id: "toast_" + toast_count },
         success: function(response) {
             $('.toast-container').append(response);
             
