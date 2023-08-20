@@ -62,7 +62,6 @@ function get_offer_name() {
 
 $(document).ready(function () {
     var list = $('#list');
-    var selected_offer = ""; // Változó deklaráció
 
     list.change(function () {
         selected_offer = $(this).val();
