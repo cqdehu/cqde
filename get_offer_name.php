@@ -18,7 +18,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
 ?>
-        <option value="<?php echo $row['id'] ?>" id="<?php echo $row['name'] ?>"><?php echo mb_strtoupper($row["name"], 'UTF-8') ?></option>
+        <option value="<?php echo $row['id'] ?>"><?php echo mb_strtoupper($row["name"], 'UTF-8') ?></option>
 <?php
     }
 } else {
