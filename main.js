@@ -6,10 +6,10 @@ $(document).ready(function () {
         var description = $('#description_input').val();
         var location = $('#location_input').val();
         var area = $('#area_input').val();
-        var rate = $('#rate_input').val()
-        var person = $('#person_input')
-        var room = $('#room_input')
-        var bed = $('#bed_input')
+        var rate = $('#rate_input').val();
+        var person = $('#person_input').val();
+        var room = $('#room_input').val();
+        var bed = $('#bed_input').val();
         var rent = $('#rent_input').val();
         var cost = $('#cost_input').val();
 
