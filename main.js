@@ -66,7 +66,7 @@ $(document).ready(function () {
 
     list.change(function () {
         selected_offer = $(this).val();
-        console.log(selected_offer)
+        console.log(selected_offer);
     });
 
     $('#delete_offer_btn').click(function () {
@@ -75,13 +75,17 @@ $(document).ready(function () {
             url: "delete_offer.php",
             data: { name: selected_offer },
             success: function (response) {
-                get_offer()
-                get_offer_name()
+                get_offer();
+                get_offer_name();
                 console.log(response);
             }
         });
     });
+
+    // Ebben a blokkban nem fut le a console.log(selected_offer)
+    console.log(selected_offer);
 });
+
 
 //
 
