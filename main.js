@@ -76,8 +76,11 @@ function delete_offer() {
 
 //
 
-$(document).ready(function () {
-    $('.card #Jd').click(function (){
-        console.log(':DDDDDDDD')
-    })
+$(document).ready(function() {
+    $(".card").on("click", function() {
+        var id = $(this).attr("id");
+        console.log("Clicked card with id:", id);
+    });
 });
+
+
