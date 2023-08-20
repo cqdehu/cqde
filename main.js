@@ -98,7 +98,7 @@ $(document).ready(function () {
                     console.log(response);
                     get_offer()
                     get_offer_name()
-                    toast(selected_offer + "ajánlat sikeresen el lett távolítva!", "success")
+                    toast(selected_offer + " ajánlat sikeresen el lett távolítva!", "success")
                 }
             });
         } else {
