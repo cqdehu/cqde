@@ -77,11 +77,12 @@ function get_offer_name() {
 };
 //
 
-// Delete Offer
+// DELETE OFFER
 
 $(document).ready(function () {
     var list = $('#list')
     var selected_offer = ""; // Változó deklaráció és inicializáció
+    var selected_offer_name = ""; // Változó a név tárolásához
 
     list.change(function () {
         selected_offer = $(this).val();
@@ -99,6 +100,8 @@ $(document).ready(function () {
                     get_offer()
                     get_offer_name()
                     toast(selected_offer_name + " ajánlat sikeresen el lett távolítva!", "success")
+                    selected_offer = ""; // Visszaállítás az üres értékre
+                    selected_offer_name = ""; // Visszaállítás az üres értékre
                 }
             });
         } else {
