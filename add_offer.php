@@ -17,10 +17,13 @@ $location = mysqli_real_escape_string($conn, $_POST["location"]);
 $area = mysqli_real_escape_string($conn, $_POST["area"]);
 $description = mysqli_real_escape_string($conn, $_POST["description"]);
 $rate = mysqli_real_escape_string($conn, $_POST["rate"]);
+$person = mysqli_real_escape_string($conn, $_POST["person"]);
+$bed = mysqli_real_escape_string($conn, $_POST["bed"]);
+$room = mysqli_real_escape_string($conn, $_POST["room"]);
 $rent = mysqli_real_escape_string($conn, $_POST["rent"]);
 $cost = mysqli_real_escape_string($conn, $_POST["cost"]);
 
-$sql = "INSERT INTO school (name, description, price, location, area, rate, rent, cost) VALUES ('$name', '$description', '$price', '$location', '$area', '$rate', '$rent', '$cost')";
+$sql = "INSERT INTO school (name, description, price, location, area, rate, person, bed, room, rent, cost) VALUES ('$name', '$description', '$price', '$location', '$area', '$rate', '$person', '$bed', '$room' '$rent', '$cost')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Adatok sikeresen hozzáadva az adatbázishoz.";
