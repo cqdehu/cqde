@@ -5,8 +5,8 @@ $(document).ready(function () {
         var description = $('#description_input')
         var location = $('#location_input').val();
         var area = $('#area_input').val();
-        var rent = $('#rent_input')
-        var cost = $('#cost_input')
+        var rent = $('#rent_input').val()
+        var cost = $('#cost_input').val()
 
         $.ajax({
             type: "POST",
@@ -79,11 +79,13 @@ function delete_offer() {
 
 //
 
-$(document).ready(function() {
-    $(document).on("click", ".card", function() {
+//
+$(document).ready(function () {
+    $(document).on("click", ".offer", function () {
         var id = $(this).attr("id");
         console.log("Clicked card with id:", id);
     });
 });
+//
 
 
