@@ -11,12 +11,16 @@ if ($conn->connect_error) {
     die("Kapcsolódási hiba: " . $conn->connect_error);
 }
 
-$name = $_POST["name"];
-$price = $_POST["price"];
-$location = $_POST["location"];
-$area = $_POST["area"];
+$name = mysqli_real_escape_string($conn, $_POST["name"]);
+$price = mysqli_real_escape_string($conn, $_POST["price"]);
+$location = mysqli_real_escape_string($conn, $_POST["location"]);
+$area = mysqli_real_escape_string($conn, $_POST["area"]);
+$description = mysqli_real_escape_string($conn, $_POST["description"]);
+$rate = mysqli_real_escape_string($conn, $_POST["rate"]);
+$rent = mysqli_real_escape_string($conn, $_POST["rent"]);
+$cost = mysqli_real_escape_string($conn, $_POST["cost"]);
 
-$sql = "INSERT INTO school (name, description, price, location, area, rate, rent, cost ) VALUES ('$name', '$description', '$price', '$location', '$area', '$rate', '$rent', '$cost')";
+$sql = "INSERT INTO school (name, description, price, location, area, rate, rent, cost) VALUES ('$name', '$description', '$price', '$location', '$area', '$rate', '$rent', '$cost')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Adatok sikeresen hozzáadva az adatbázishoz.";
