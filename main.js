@@ -113,7 +113,7 @@ function toast(text) {
         data: {text: text, id: toast_count},
         success: function (response) {
             $('.toast-container').append(response)
-            $('#toast').toast('show')
+            $('#'+id).toast('show')
         }
     });
 }
