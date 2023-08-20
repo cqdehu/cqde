@@ -74,7 +74,7 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: "delete_offer.php",
-            data: { name: selected_offer },
+            data: { selected_offer: selected_offer },
             success: function (response) {
                 console.log(response);
             }
