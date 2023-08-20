@@ -105,7 +105,7 @@ function toast(text) {
     
     $.ajax({
         type: "POST",
-        url: "get_tost.php",
+        url: "get_toast.php",
         data: {text: text},
         success: function (response) {
             $('.toast-container').html(response)
