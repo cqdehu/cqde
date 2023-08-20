@@ -61,7 +61,7 @@ function get_offer_name() {
 //
 
 $(document).ready(function () {
-    var selected_offer = $('#list').val() // Változó deklaráció és inicializáció
+    var selected_offer = $('#list').val(); // Változó deklaráció és inicializáció
 
     $('#list').change(function () {
         selected_offer = $(this).val();
@@ -73,13 +73,14 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: "delete_offer.php",
-            data: { selected_offer: selected_offer },
+            data: { name: selected_offer }, // Itt a nevet definiálod, nem selected_offer
             success: function (response) {
                 console.log(response);
             }
         });
     });
 });
+
 
 
 
