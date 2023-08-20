@@ -53,11 +53,11 @@ $(document).ready(function () {
 //
 
 
-//
+// GET PRE OFFER
 function get_offer() {
     $.ajax({
         type: "GET",
-        url: "get_offer.php",
+        url: "get_pre_offer.php",
         success: function (response) {
             $('#offers').hide().html(response).fadeIn('slow');
         }
@@ -109,20 +109,6 @@ $(document).ready(function () {
         }
     });
 });
-
-
-
-
-//
-
-// SELECT_OFFER
-$(document).ready(function () {
-    $(document).on("click", ".offer", function () {
-        var id = $(this).attr("id");
-        console.log(id)
-
-    });
-});
 //
 
 // TOAST
@@ -149,8 +135,24 @@ function toast(text, color) {
         }
     });
 }
-
-
 //
 
+// GET OFFER
+$(document).ready(function () {
+    $(document).on("click", ".offer", function () {
+        var id = $(this).attr("id");
+        $.ajax({
+            type: "GET",
+            url: "get_offer.php",
+            data: {
+                id: id
+            },
+            success: function (response) {
+                $("#offer").html(response)
+            }
+        });
+
+    });
+});
+//
 
