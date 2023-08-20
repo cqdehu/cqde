@@ -85,7 +85,7 @@ $(document).ready(function () {
 
     list.change(function () {
         selected_offer = $(this).val();
-        console.log(selected_offer);
+        selected_offer_name = $(this).find(':selected').text()
     });
 
     $('#delete_offer_btn').click(function () {
@@ -98,7 +98,7 @@ $(document).ready(function () {
                     console.log(response);
                     get_offer()
                     get_offer_name()
-                    toast(selected_offer + " ajánlat sikeresen el lett távolítva!", "success")
+                    toast(selected_offer_name + " ajánlat sikeresen el lett távolítva!", "success")
                 }
             });
         } else {
