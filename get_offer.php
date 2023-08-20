@@ -158,5 +158,7 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 
-header("Location: offer.html")
+header("Location: offer.html");
+
+exit
 ?>
