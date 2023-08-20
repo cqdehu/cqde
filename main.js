@@ -41,9 +41,10 @@ $(document).ready(function () {
 
 //
 $(document).ready(function () {
-    $('#list').keyup(function () { 
-        console.log(this)
-    });
+    $('#list').change(function() {
+        var selected_offer = $(this).val()
+        console.log(selected_offer)
+    })
 });
 //
 
