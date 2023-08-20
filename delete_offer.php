@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
 $selected_offer = $_POST["name"];
 
-$sql = "DELETE FROM school WHERE `name` = $selected_offer";
+$sql = "DELETE FROM `school` WHERE `name` = $selected_offer";
 
 if ($conn->query($sql) === TRUE) {
     echo "Az adat sikeresen törölve.";
