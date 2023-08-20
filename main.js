@@ -39,7 +39,7 @@ $(document).ready(function () {
 });
 //
 
-var selected_offer = $('#list')
+var selected_offer = $('#list').val()
 
 //
 $(document).ready(function () {
