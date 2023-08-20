@@ -15,36 +15,32 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo '<div class="col p-0 m-0">';
-        echo '<div class="card rounded-4 border-0 offer" id='.$row['name'].'>';
-        echo '<span class="position-relative">';
-        echo '<span class="position-absolute top-0 end-0">';
-        echo '<span class="badge rate-bg rate m-3 px-3 fs-6 rounded-4">' . $row['rate'] . '</span>';
-        echo '</span>';
-        echo '</span>';
-        echo '<img src="/src/img.png" alt="" class="rounded-top-4 border-0">';
-        echo '<div class="card-body">';
-        echo '<div class="container">';
-        echo '<div class="row">';
-        echo '<div class="col p-0 m-0">';
-        echo '<p class="p-0 m-0 fs-4 text-start name">' . mb_strtoupper($row["name"],'UTF-8') . '</p>';
-        echo '</div>';
-        echo '<div class="col p-0 m-0">';
-        echo '<p class="p-0 m-0 fs-4 text-end price">' . $row["price"] . ' Ft</p>';
-        echo '</div>';
-        echo '</div>';
-        echo '<div class="row pt-2">';
-        echo '<div class="col p-0 m-0">';
-        echo '<p class="p-0 m-0 fs-6 text-start location">' . $row["location"] . '</p>';
-        echo '</div>';
-        echo '<div class="col p-0 m-0">';
-        echo '<p class="p-0 m-0 fs-6 text-end area">' . $row["area"] . ' m<sup>2</sup></p>';
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';
+?>
+        <div class="col p-0 m-0">
+            <div class="card rounded-4 border-0 offer" id="SZEGED"><span class="position-relative"><span class="position-absolute top-0 end-0"><span class="badge rate-bg rate m-3 px-3 fs-6 rounded-4">10</span></span></span><img src="/src/img.png" alt="" class="rounded-top-4 border-0">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col p-0 m-0">
+                                <p class="p-0 m-0 fs-4 text-start name"><?php $row['name']?></p>
+                            </div>
+                            <div class="col p-0 m-0">
+                                <p class="p-0 m-0 fs-4 text-end price"><?php $row['price']?> Ft</p>
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col p-0 m-0">
+                                <p class="p-0 m-0 fs-6 text-start location"><?php $row['location']?></p>
+                            </div>
+                            <div class="col p-0 m-0">
+                                <p class="p-0 m-0 fs-6 text-end area"><?php $row['area']?><sup>2</sup></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<?php
     }
 } else {
     echo "Nincsenek adatok.";
