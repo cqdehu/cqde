@@ -109,7 +109,7 @@ function toast(text) {
         data: {text: text},
         success: function (response) {
             $('.toast-container').append(response)
-            $('#toast').toast('show')
+            $(this).toast('show')
         }
     });
 }
