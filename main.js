@@ -60,40 +60,34 @@ function get_offer_name() {
 //
 
 //
-function delete_offer() {
-    var list = $('#list');
-    var selected_offer = ""; // Változó deklaráció
 
-    list.change(function () {
-        selected_offer = $(this).val();
-    });
-
-    $('#delete_offer_btn').click(function () {
-        $.ajax({
-            type: "POST",
-            url: "delete_offer.php",
-            data: { name: selected_offer },
-            success: function (response) {
-                get_offer()
-                get_offer_name()
-                console.log(response);
-            }
-        });
-    });
-};
-
-//
+var list = $('#list');
+var selected_offer = ""; // Változó deklaráció
 
 list.change(function () {
     selected_offer = $(this).val();
-    console.log(selected_offer)
 });
+
+$('#delete_offer_btn').click(function () {
+    $.ajax({
+        type: "POST",
+        url: "delete_offer.php",
+        data: { name: selected_offer },
+        success: function (response) {
+            get_offer()
+            get_offer_name()
+            console.log(response);
+        }
+    });
+});
+
+//
 
 //
 $(document).ready(function () {
     $(document).on("click", ".offer", function () {
         var id = $(this).attr("id");
-        
+
 
     });
 });
