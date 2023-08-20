@@ -2,6 +2,12 @@ body {
     background: #0B2820;
 }
 
+.full-width-header img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra spacing below image */
+}
+
 
 
 ::-webkit-scrollbar {

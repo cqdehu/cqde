@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
         echo '<p class="p-0 m-0 fs-4 text-end price">' . $row["price"] . ' Ft</p>';
         echo '</div>';
         echo '</div>';
-        echo '<div class="row pt-1">';
+        echo '<div class="row pt-2">';
         echo '<div class="col p-0 m-0">';
         echo '<p class="p-0 m-0 fs-6 text-start location">' . $row["location"] . '</p>';
         echo '</div>';
