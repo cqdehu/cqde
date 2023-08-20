@@ -56,7 +56,7 @@ $(document).ready(function () {
             url: "delete_offer.php",
             data: { name: selected_offer},
             success: function (response) {
-                $('#' + selected_offer).remove()
+                $("#" + selected_offer).remove();
                 console.log(response)
                 
                 
