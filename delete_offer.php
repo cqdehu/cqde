@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 
-$selected_offer = $_POST["selected_offer"];
+$selected_offer = $_POST["name"];
 
 $sql = "DELETE FROM school WHERE name = $selected_offer";
 
