@@ -77,7 +77,7 @@ function delete_offer() {
 //
 
 $(document).ready(function () {
-    $('#SZEGED').click(function (){
-        console.log(this)
+    $('#Jd').click(function (){
+        console.log(':DDDDDDDD')
     })
 });
