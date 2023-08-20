@@ -1,13 +1,3 @@
-$(document).ready(function get_offer() {
-    $.ajax({
-        type: "GET",
-        url: "get_offer.php",
-        success: function (response) {
-            $('#offers').html(response);
-        }
-    });
-});
-
 $(document).ready(function () {
     $('#add_button').click(function () {
         var name = $('#name_input').val();
@@ -20,11 +10,22 @@ $(document).ready(function () {
             url: "add_offer.php",
             data: { name: name, price: price, location: location, area: area },
             success: function (response) {
-                get_offer()
+                alert('Done');
             }
         });
     });
 });
+
+function get_offer() {
+    $.ajax({
+        type: "GET",
+        url: "get_offer.php",
+        success: function (response) {
+            $('#offers').html(response);
+        }
+    });
+};
+
 
 //
 $(document).ready(function () {
@@ -43,11 +44,11 @@ $(document).ready(function () {
     var list = $('#list');
     var selected_offer = ""; // Változó deklaráció
 
-    list.change(function() {
+    list.change(function () {
         selected_offer = $(this).val();
     });
 
-    $('#delete_offer_btn').click(function() {
+    $('#delete_offer_btn').click(function () {
         $.ajax({
             type: "POST",
             url: "delete_offer.php",
