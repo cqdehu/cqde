@@ -16,7 +16,7 @@ $price = $_POST["price"];
 $location = $_POST["location"];
 $area = $_POST["area"];
 
-$sql = "INSERT INTO school (name, price, location, area) VALUES ('$name', '$price', '$location', '$area')";
+$sql = "INSERT INTO school (name, description, price, location, area, rate, rent, cost ) VALUES ('$name', '$description', '$price', '$location', '$area', '$rate', '$rent', '$cost')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Adatok sikeresen hozzáadva az adatbázishoz.";
