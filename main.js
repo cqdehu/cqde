@@ -101,22 +101,25 @@ $(document).ready(function () {
 
 // Toast
 
-var toast_count = 0
+var toast_count = 0;
 
 function toast(text) {
-
-    toast_count++
+    toast_count++;
     
     $.ajax({
         type: "POST",
         url: "get_toast.php",
-        data: {text: text, id: toast_count},
-        success: function (response) {
-            $('.toast-container').append(response)
-            $('#'+toast_count).toast('show')
+        data: { text: text, id: toast_count },
+        success: function(response) {
+            $('.toast-container').append(response);
+            
+            var toastId = "toast_" + toast_count; // Az egyedi toast id
+            
+            $('#' + toastId).toast('show'); // Megjelenítés a helyes id alapján
         }
     });
 }
+
 
 //
 
