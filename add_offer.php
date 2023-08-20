@@ -24,7 +24,8 @@ $room = mysqli_real_escape_string($conn, $_POST["room"]);
 $rent = mysqli_real_escape_string($conn, $_POST["rent"]);
 $cost = mysqli_real_escape_string($conn, $_POST["cost"]);
 
-$sql = "INSERT INTO school (id, name, description, price, location, area, rate, person, bed, room, rent, cost) VALUES ('$id', '$name', '$description', '$price', '$location', '$area', '$rate', '$person', '$bed', '$room' '$rent', '$cost')";
+$sql = "INSERT INTO school (id, name, description, price, location, area, rate, person, bed, room, rent, cost) VALUES ('$id', '$name', '$description', '$price', '$location', '$area', '$rate', '$person', '$bed', '$room', '$rent', '$cost')";
+
 
 if ($conn->query($sql) === TRUE) {
     echo "Adatok sikeresen hozzáadva az adatbázishoz.";
