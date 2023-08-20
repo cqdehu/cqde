@@ -30,6 +30,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     get_offer()
     get_offer_name()
+    delete_offer()
 });
 //
 
@@ -52,22 +53,19 @@ function get_offer_name() {
         type: "GET",
         url: "get_offer_name.php",
         success: function (response) {
-            $('#list').html(response)
+            $('#delete_list').html(response)
         }
     });
 };
 //
 
 //
+function delete_offer() {
+    var list = $('#list');
+    var selected_offer = ""; // Változó deklaráció
 
-$(document).ready(function () {
-    var delete_list = $('#delete_list');
-    var selected_offer = "";
-
-    delete_list.change(function () {
+    list.change(function () {
         selected_offer = $(this).val();
-        console.log(selected_offer)
-        console.log("change")
     });
 
     $('#delete_offer_btn').click(function () {
@@ -83,8 +81,7 @@ $(document).ready(function () {
             }
         });
     });
-});
-
+};
 
 //
 

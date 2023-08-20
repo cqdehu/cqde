@@ -1,4 +1,4 @@
-<select name="" class="form-select" id="delete_list">
+<select name="" class="form-select" id="list">
     <option value="" selected>Válassz...</option>
 
     <?php
