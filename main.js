@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('#add_button').click(function () {
         var name = $('#name_input').val();
         var price = $('#price_input').val();
-        var description = $('#description_input')
+        var description = $('#description_input').val()
         var location = $('#location_input').val();
         var area = $('#area_input').val();
         var rent = $('#rent_input').val()
