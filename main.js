@@ -101,15 +101,19 @@ $(document).ready(function () {
 
 // Toast
 
+var toast_count = 0
+
 function toast(text) {
+
+    toast_count++
     
     $.ajax({
         type: "POST",
         url: "get_toast.php",
-        data: {text: text},
+        data: {text: text, id: toast_count},
         success: function (response) {
             $('.toast-container').append(response)
-            $(this).toast('show')
+            $('#toast').toast('show')
         }
     });
 }
