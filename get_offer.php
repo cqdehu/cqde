@@ -15,7 +15,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo '<div class="col p-0 m-0">';
+        echo '<div class="col p-0 m-0" style="height: 100%">';
         echo '<div class="card rounded-4 border-0 offer" id='.$row['name'].'>';
         echo '<span class="position-relative">';
         echo '<span class="position-absolute top-0 end-0">';
