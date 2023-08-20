@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
         echo '<div class="col p-0 m-0">';
         echo '<p class="p-0 m-0 fs-6 text-start location">' . $row["location"] . '</p>';
         echo '</div>';
-        echo '<div class="col-2 p-0 m-0">';
+        echo '<div class="col p-0 m-0">';
         echo '<p class="p-0 m-0 fs-6 text-end area">' . $row["area"] . ' m<sup>2</sup></p>';
         echo '</div>';
         echo '</div>';
