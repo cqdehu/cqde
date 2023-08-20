@@ -1,3 +1,4 @@
+// ADD OFFER
 $(document).ready(function () {
     $('#add_button').click(function () {
         var name = $('#name_input').val();
@@ -6,14 +7,17 @@ $(document).ready(function () {
         var location = $('#location_input').val();
         var area = $('#area_input').val();
         var rate = $('#rate_input').val()
+        var person = $('#person_input')
+        var room = $('#room_input')
+        var bed = $('#bed_input')
         var rent = $('#rent_input').val();
         var cost = $('#cost_input').val();
 
-        if (name !== '' && price !== '' && description !== '' && location !== '' && area !== '' && rate !== '' && rent !== '' && cost !== '') {
+        if (name !== '' && price !== '' && description !== '' && location !== '' && area !== '' && rate !== '' && person !== '' && room !== '' && bed !== '' && rent !== '' && cost !== '') {
             $.ajax({
                 type: "POST",
                 url: "add_offer.php",
-                data: { name: name, price: price, description: description, location: location, area: area, rate: rate, rent: rent, cost: cost },
+                data: { name: name, price: price, description: description, location: location, area: area, rate: rate, person: person, room: room, bed: bed, rent: rent, cost: cost },
                 success: function (response) {
                     get_offer();
                     get_offer_name();
@@ -25,6 +29,7 @@ $(document).ready(function () {
         }
     });
 });
+//
 
 
 //
@@ -104,22 +109,26 @@ $(document).ready(function () {
 });
 //
 
-// Toast
+// TOAST
 
 var toast_count = 0;
 
-function toast(text) {
+function toast(text, color) {
     toast_count++;
-    
+
+    if (color=='') {
+        color = "dark"
+    }
+
     $.ajax({
         type: "POST",
         url: "get_toast.php",
-        data: { text: text, id: "toast_" + toast_count },
-        success: function(response) {
+        data: { text: text, id: "toast_" + toast_count, color: color },
+        success: function (response) {
             $('.toast-container').append(response);
-            
+
             var toastId = "toast_" + toast_count; // Az egyedi toast id
-            
+
             $('#' + toastId).toast('show'); // Megjelenítés a helyes id alapján
         }
     });
