@@ -1,3 +1,5 @@
+<option selected>Open this select menu</option>
+
 <?php
 $servername = "localhost";
 $username = "u142909563_LEAdmin";
