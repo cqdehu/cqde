@@ -40,27 +40,18 @@ $(document).ready(function () {
 //
 
 //
-//
-
-//
-
-
 $(document).ready(function () {
 
-    var list = $('#list')
+    var list = $('#list');
+
+    var selected_offer = ""; // Változó deklaráció
 
     list.change(function() {
-        selected_offer = $(this).val()
-    })
-
+        selected_offer = $(this).val();
+    });
 
     $('#delete_offer_btn').click(function() {
-        console.log(selected_offer)
-    })
+        console.log(selected_offer);
+    });
 });
-
-
-
-
-
-
+//
