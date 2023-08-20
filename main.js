@@ -17,6 +17,7 @@ $(document).ready(function () {
 });
 
 function get_offer() {
+    $('#offers').empty()
     $.ajax({
         type: "GET",
         url: "get_offer.php",
