@@ -32,10 +32,22 @@ function get_offer() {
         type: "GET",
         url: "get_offer.php",
         success: function (response) {
-            $('#offers').html(response);
+            var offers = response; // Varsayılan olarak JSON veya tömb formatta dönüş alındığını varsayalım
+
+            var list = $('#list');
+            list.empty(); // Törölje a listában lévő összes opciót
+
+            // Az új opciók hozzáadása az ajánlatokhoz
+            $.each(offers, function(offer) {
+                list.append($('<option>', {
+                    value: offer.value, // Az ajánlat egyedi azonosítója vagy értéke
+                    text: offer.text // Az ajánlat neve vagy szövege
+                }));
+            });
         }
     });
-};
+}
+
 //
 
 //
