@@ -1,5 +1,5 @@
 <select name="" class="form-select" id="list">
-    <option value="" selected>Válassz...</option>
+    <option value="">Válassz...</option>
 
     <?php
     $servername = "localhost";
