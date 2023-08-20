@@ -70,6 +70,7 @@ $(document).ready(function () {
     });
 
     $('#delete_offer_btn').click(function () {
+        console.log(selected_offer);
         $.ajax({
             type: "POST",
             url: "delete_offer.php",
@@ -81,9 +82,6 @@ $(document).ready(function () {
             }
         });
     });
-
-    // Ebben a blokkban nem fut le a console.log(selected_offer)
-    console.log(selected_offer);
 });
 
 
