@@ -112,7 +112,7 @@ $(document).ready(function () {
 
 //
 
-// Select Offer
+// SELECT_OFFER
 $(document).ready(function () {
     $(document).on("click", ".offer", function () {
         var id = $(this).attr("id");
