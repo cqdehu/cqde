@@ -77,13 +77,17 @@ function delete_offer() {
                 get_offer()
                 get_offer_name()
                 console.log(response);
-
             }
         });
     });
 };
 
 //
+
+list.change(function () {
+    selected_offer = $(this).val();
+    console.log(selected_offer)
+});
 
 //
 $(document).ready(function () {
