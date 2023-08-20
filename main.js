@@ -32,7 +32,7 @@ function get_offer() {
         type: "GET",
         url: "get_offer.php",
         success: function (response) {
-            $('#offers').html(response).fadeIn('slow');
+            $('#offers').hide().html(response).fadeIn('slow');
         }
     });
 };
