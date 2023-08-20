@@ -141,6 +141,7 @@ function toast(text, color) {
 $(document).ready(function () {
     $(document).on("click", ".offer", function () {
         var id = $(this).attr("id");
+        console.log(id)
         $.ajax({
             type: "GET",
             url: "get_offer.php",
