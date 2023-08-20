@@ -1,5 +1,3 @@
-const uuid = require('uuid');
-
 // ADD OFFER
 $(document).ready(function () {
     $('#add_button').click(function () {
