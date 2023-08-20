@@ -15,7 +15,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo '<option value='. $row["name"] .'>'. mb_strtoupper($row["name"],'UTF-8') .'</option>';
+        echo '<option value='. $row["name"] .' id='. $row["name"] .'>'. mb_strtoupper($row["name"],'UTF-8') .'</option>';
     }
 } else {
     echo "Nincsenek adatok.";
