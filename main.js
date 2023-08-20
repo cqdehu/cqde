@@ -76,8 +76,6 @@ $(document).ready(function () {
             url: "delete_offer.php",
             data: { name: selected_offer },
             success: function (response) {
-                get_offer();
-                get_offer_name();
                 console.log(response);
             }
         });
