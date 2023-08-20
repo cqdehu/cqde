@@ -17,6 +17,16 @@ $(document).ready(function () {
     });
 });
 
+//
+$(document).ready(function () {
+    get_offer()
+    get_offer_name()
+    delete_offer()
+});
+//
+
+
+//
 function get_offer() {
     $.ajax({
         type: "GET",
@@ -26,12 +36,7 @@ function get_offer() {
         }
     });
 };
-
-
-$(document).ready(function () {
-    get_offer()
-    get_offer_name()
-});
+//
 
 //
 function get_offer_name() {
@@ -46,7 +51,7 @@ function get_offer_name() {
 //
 
 //
-$(document).ready(function () {
+function delete_offer() {
     var list = $('#list');
     var selected_offer = ""; // Változó deklaráció
 
@@ -60,11 +65,13 @@ $(document).ready(function () {
             url: "delete_offer.php",
             data: { name: selected_offer },
             success: function (response) {
-                $("#" + selected_offer).remove();
+                get_offer()
+                get_offer_name()
                 console.log(response);
+
             }
         });
     });
-});
+};
 
 //
