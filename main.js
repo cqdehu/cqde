@@ -30,7 +30,6 @@ $(document).ready(function () {
 $(document).ready(function () {
     get_offer()
     get_offer_name()
-    delete_offer()
 });
 //
 
@@ -60,7 +59,8 @@ function get_offer_name() {
 //
 
 //
-function delete_offer() {
+
+$(document).ready(function () {
     var delete_list = $('#delete_list');
     var selected_offer = ""; // Változó deklaráció
 
@@ -82,7 +82,8 @@ function delete_offer() {
             }
         });
     });
-};
+});
+
 
 //
 
