@@ -39,14 +39,24 @@ $(document).ready(function () {
 });
 //
 
+var selected_offer = $('#list')
+
 //
 $(document).ready(function () {
-    $('#list').change(function() {
+    selected_offer.change(function() {
         var selected_offer = $(this).val()
-        console.log(selected_offer)
     })
 });
 //
+
+//
+$(document).ready(function () {
+    $('#delete_offer_btn').click(function() {
+        console.log(selected_offer)
+    })
+});
+
+
 
 
 
