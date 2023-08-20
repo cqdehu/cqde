@@ -26,41 +26,18 @@ $(document).ready(function () {
     });
 });
 
+
+//
 $(document).ready(function () {
     $.ajax({
         type: "GET",
-        url: "get_name.php",
+        url: "get_offer_name.php",
         success: function (response) {
             $('#list').html(response)
         }
     });
 });
-
-
-$(document).ready(function () {
-    $("#searchInput").on("keyup", function () {
-        var searchTerm = $(this).val().toLowerCase();
-
-        $("#offers .card").each(function () {
-            var itemName = $(this).find(".name").text().toLowerCase();
-            var itemLocation = $(this).find(".location").text().toLowerCase();
-
-            if (itemName.includes(searchTerm) || itemLocation.includes(searchTerm)) {
-                $(this).parent().show(); // Megjelenítjük a tartalmazó .col elemet
-                $(this).show(); // Megjelenítjük a .card elemet
-            } else {
-                $(this).parent().hide(); // Elrejtjük a tartalmazó .col elemet
-                $(this).hide(); // Elrejtjük a .card elemet
-            }
-        });
-
-        // Ha nincs keresőkifejezés, megjelenítjük az összes .card elemet
-        if (!searchTerm) {
-            $("#offers .card").parent().show();
-            $("#offers .card").show();
-        }
-    });
-});
+//
 
 
 
