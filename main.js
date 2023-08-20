@@ -81,8 +81,8 @@ function get_offer_name() {
 
 $(document).ready(function () {
     var list = $('#list')
-    var selected_offer = ""; // Változó deklaráció és inicializáció
-    var selected_offer_name = ""; // Változó a név tárolásához
+    var selected_offer = "";
+    var selected_offer_name = "";
 
     list.change(function () {
         selected_offer = $(this).val();
@@ -94,14 +94,14 @@ $(document).ready(function () {
             $.ajax({
                 type: "POST",
                 url: "delete_offer.php",
-                data: { name: selected_offer }, // Itt a nevet definiálod, nem selected_offer
+                data: { name: selected_offer },
                 success: function (response) {
                     console.log(response);
                     get_offer()
                     get_offer_name()
                     toast(selected_offer_name + " ajánlat sikeresen el lett távolítva!", "success")
-                    selected_offer = ""; // Visszaállítás az üres értékre
-                    selected_offer_name = ""; // Visszaállítás az üres értékre
+                    selected_offer = "";
+                    selected_offer_name = "";
                 }
             });
         } else {
@@ -119,7 +119,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(document).on("click", ".offer", function () {
         var id = $(this).attr("id");
-
+        console.log(id)
 
     });
 });
