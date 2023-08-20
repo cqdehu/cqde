@@ -10,7 +10,7 @@ $(document).ready(function () {
             url: "add_offer.php",
             data: { name: name, price: price, location: location, area: area },
             success: function (response) {
-                alert('Done');
+                get_offer()
             }
         });
     });
@@ -26,6 +26,10 @@ function get_offer() {
     });
 };
 
+
+$(document).ready(function () {
+    get_offer()
+});
 
 //
 $(document).ready(function () {
