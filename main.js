@@ -150,6 +150,7 @@ $(document).ready(function () {
             },
             success: function (response) {
                 $("#offer").html(response)
+                window.location.href = "offer.html"
             }
         });
 
