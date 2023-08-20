@@ -5,6 +5,7 @@ $(document).ready(function () {
         var description = $('#description_input').val();
         var location = $('#location_input').val();
         var area = $('#area_input').val();
+        var rate = $('#rate_input').val()
         var rent = $('#rent_input').val();
         var cost = $('#cost_input').val();
 
@@ -12,7 +13,7 @@ $(document).ready(function () {
             $.ajax({
                 type: "POST",
                 url: "add_offer.php",
-                data: { name: name, price: price, description: description, location: location, area: area, rent: rent, cost: cost },
+                data: { name: name, price: price, description: description, location: location, area: area, rate: rate, rent: rent, cost: cost },
                 success: function (response) {
                     get_offer();
                     get_offer_name();
