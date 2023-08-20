@@ -9,7 +9,7 @@ $(document).ready(function () {
         var rent = $('#rent_input').val();
         var cost = $('#cost_input').val();
 
-        if (name !== '' && price !== '' && description !== '' && location !== '' && area !== '' && rent !== '' && cost !== '') {
+        if (name !== '' && price !== '' && description !== '' && location !== '' && area !== '' && rate !== '' && rent !== '' && cost !== '') {
             $.ajax({
                 type: "POST",
                 url: "add_offer.php",
