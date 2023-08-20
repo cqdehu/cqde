@@ -57,6 +57,8 @@ $(document).ready(function () {
             data: { name: selected_offer},
             success: function (response) {
                 console.log(response)
+                selected_offer.val().remove()
+                
             }
         });
     });
