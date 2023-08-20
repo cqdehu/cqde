@@ -11,6 +11,7 @@ $(document).ready(function () {
             data: { name: name, price: price, location: location, area: area },
             success: function (response) {
                 get_offer()
+                get_offer_name()
             }
         });
     });
@@ -29,10 +30,11 @@ function get_offer() {
 
 $(document).ready(function () {
     get_offer()
+    get_offer_name()
 });
 
 //
-$(document).ready(function () {
+function get_offer_name() {
     $.ajax({
         type: "GET",
         url: "get_offer_name.php",
@@ -40,7 +42,7 @@ $(document).ready(function () {
             $('#list').html(response)
         }
     });
-});
+};
 //
 
 //
