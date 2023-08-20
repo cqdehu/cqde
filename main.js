@@ -21,11 +21,11 @@ $(document).ready(function () {
                 success: function (response) {
                     get_offer();
                     get_offer_name();
-                    toast(name + "ajánlat sikeresen létrehozva!")
+                    toast(name + "ajánlat sikeresen létrehozva!", "success")
                 }
             });
         } else {
-            toast("Minden mező kitöltése kötelező!");
+            toast("Minden mező kitöltése kötelező!", "danger");
         }
     });
 });
@@ -85,11 +85,11 @@ $(document).ready(function () {
                     console.log(response);
                     get_offer()
                     get_offer_name()
-                    toast(selected_offer + "ajánlat sikeresen el lett távolítva!")
+                    toast(selected_offer + "ajánlat sikeresen el lett távolítva!", "success")
                 }
             });
         } else {
-            toast("Válassz egy ajánlatot!")
+            toast("Válassz egy ajánlatot!", "info")
         }
     });
 });
