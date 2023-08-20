@@ -1,4 +1,4 @@
-<option selected>Open this select menu</option>
+<option selected>Select...</option>
 
 <?php
 $servername = "localhost";

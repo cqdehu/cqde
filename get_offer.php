@@ -43,7 +43,7 @@ if ($result->num_rows > 0) {
 <?php
     }
 } else {
-    echo "Nincsenek adatok.";
+    echo "Nincsenek ajánlatok";
 }
 
 $conn->close();
