@@ -122,4 +122,8 @@ function toast(text) {
 
 toast("Hello World")
 
+toast("2")
+
+toast("3")
+
 
