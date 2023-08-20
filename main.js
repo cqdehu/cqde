@@ -48,9 +48,9 @@ $(document).ready(function () {
 //
 $(document).ready(function () {
 
-    var selected_offer = $('#list').val()
+    var list = $('#list').val()
 
-    selected_offer.change(function() {
+    list.change(function() {
         selected_offer = $(this).val()
     })
 
