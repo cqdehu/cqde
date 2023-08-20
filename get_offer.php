@@ -17,7 +17,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
 ?>
         <div class="col p-0 m-0">
-            <div class="card rounded-4 border-0 offer" id="SZEGED"><span class="position-relative"><span class="position-absolute top-0 end-0"><span class="badge rate-bg rate m-3 px-3 fs-6 rounded-4">10</span></span></span><img src="/src/img.png" alt="" class="rounded-top-4 border-0">
+            <div class="card rounded-4 border-0 offer" id="SZEGED"><span class="position-relative"><span class="position-absolute top-0 end-0"><span class="badge rate-bg rate m-3 px-3 fs-6 rounded-4"><?php echo $row['rate'] ?></span></span></span><img src="/src/img.png" alt="" class="rounded-top-4 border-0">
                 <div class="card-body">
                     <div class="container">
                         <div class="row">
