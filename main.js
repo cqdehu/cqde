@@ -61,9 +61,10 @@ function get_offer_name() {
 //
 
 $(document).ready(function () {
-    var selected_offer = $('#list').val(); // Változó deklaráció és inicializáció
+    var list = $('#list')
+    var selected_offer = ""; // Változó deklaráció és inicializáció
 
-    $('#list').change(function () {
+    list.change(function () {
         selected_offer = $(this).val();
         console.log(selected_offer);
     });
@@ -76,6 +77,8 @@ $(document).ready(function () {
             data: { name: selected_offer }, // Itt a nevet definiálod, nem selected_offer
             success: function (response) {
                 console.log(response);
+                get_offer()
+                get_offer_name()
             }
         });
     });
