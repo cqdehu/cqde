@@ -44,7 +44,7 @@ function get_offer_name() {
         type: "GET",
         url: "get_offer_name.php",
         success: function (response) {
-            $('#list').html(response)
+            $('#list').append(response)
         }
     });
 };
