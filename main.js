@@ -40,12 +40,11 @@ $(document).ready(function () {
 //
 
 //
-$(document).ready(function () {
-    
-});
 //
 
 //
+
+
 $(document).ready(function () {
 
     var list = $('#list')
