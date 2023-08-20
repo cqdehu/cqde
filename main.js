@@ -80,6 +80,7 @@ $(document).ready(function () {
                 console.log(response);
                 get_offer()
                 get_offer_name()
+                toast(selected_offer + "sikeresen el lett távolítva!")
             }
         });
     });
