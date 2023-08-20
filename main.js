@@ -39,6 +39,14 @@ $(document).ready(function () {
 });
 //
 
+//
+$(document).ready(function () {
+    $('#list').keyup(function () { 
+        console.log(this)
+    });
+});
+//
+
 
 
 
