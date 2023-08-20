@@ -2,8 +2,6 @@
 $(document).ready(function () {
     $('#add_button').click(function () {
 
-        var id = uuidv4();
-
         var name = $('#name_input').val();
         var price = $('#price_input').val();
         var description = $('#description_input').val();
@@ -21,7 +19,6 @@ $(document).ready(function () {
                 type: "POST",
                 url: "add_offer.php",
                 data: {
-                    id: id,
                     name: name,
                     price: price,
                     description: description,
