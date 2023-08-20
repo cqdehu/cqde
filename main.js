@@ -41,9 +41,7 @@ $(document).ready(function () {
 
 //
 $(document).ready(function () {
-
     var list = $('#list');
-
     var selected_offer = ""; // Változó deklaráció
 
     list.change(function() {
@@ -54,14 +52,13 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: "delete_offer.php",
-            data: { name: selected_offer},
+            data: { name: selected_offer },
             success: function (response) {
                 $("#" + selected_offer).remove();
-                console.log(response)
-                
-                
+                console.log(response);
             }
         });
     });
 });
+
 //
