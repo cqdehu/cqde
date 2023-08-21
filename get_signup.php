@@ -13,6 +13,6 @@
         </div>
     </div>
     <div class="row">
-        <button class="btn btn-success" id="signup_button">Log In</button>
+        <button class="btn btn-success" id="signup_button">Sign Up</button>
     </div>
 </div>
