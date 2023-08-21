@@ -158,9 +158,41 @@ $(document).ready(function () {
 $(document).ready(function () {
     $.ajax({
         type: "GET",
-        url: "login.php",
+        url: "get_signup.php",
         success: function (response) {
             $('#root').html(response)
         }
     });
 });
+
+$(document).ready(function () {
+    $('#signup_button').click(function () {
+        
+        var regUsername = $('#username_input').val();
+        var regPassword = $('#password_input').val();
+        
+        $.ajax({
+            type: 'POST',
+            url: 'register.php', // Regisztrációs PHP fájl
+            data: { username: regUsername, password: regPassword },
+            success: function (response) {
+                if (response.success) {
+                    alert('Sikeres regisztráció! Most már bejelentkezhetsz.');
+                    get_login()
+                } else {
+                    alert('Hiba történt a regisztráció során: ' + response.error);
+                }
+            }
+        });
+    });
+});
+
+function get_login() {
+    $.ajax({
+        type: "GET",
+        url: "get_login.php",
+        success: function (response) {
+            $('#root').html(response)
+        }
+    });
+};
