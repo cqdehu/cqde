@@ -1,4 +1,4 @@
-// 
+// ADD OFFER BUTTON
 $(document).ready(function () {
     $('#add_button').click(function () {
         add_offer()
