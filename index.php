@@ -77,7 +77,7 @@ if (!isset($_SESSION["username"])) {
                                     <span class="badge rate-bg rate m-3 px-3 fs-6 rounded-4"><?php echo $row['rate'] ?></span>
                                 </span>
                             </span>
-                            <img src="/src/img.png" alt="" class="rounded-top-4 border-0" loading="lazy">
+                            <img src="/src/img.png" alt="" class="rounded-top-4 border-0">
                             <div class="card-body">
                                 <div class="container">
                                     <div class="row">
