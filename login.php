@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Jelszó ellenőrzése
         if (password_verify($password, $hashedPassword)) {
             $_SESSION["username"] = $username;
-            header("Location: dashboard");
+            header("Location: index");
         } else {
             $hiba_uzenet = "Hibás felhasználónév vagy jelszó.";
         }
