@@ -176,17 +176,19 @@ $(document).ready(function () {
             type: 'POST',
             url: 'signup.php', // Regisztrációs PHP fájl
             data: { username: regUsername, password: regPassword },
+            dataType: 'json', // Hozzáadott sor: válasz JSON formátumú
             success: function (response) {
-                if (response.trim() === 'success') {
-                    alert('Sikeres regisztráció! Most már bejelentkezhetsz.');
+                if (response.success) {
+                    alert(response.success); // Sikeres válasz kiírása
                     get_login();
                 } else {
-                    alert('Hiba történt a regisztráció során: ' + response);
+                    alert('Hiba történt a regisztráció során: ' + response.error);
                 }
             }
         });
     });
 });
+
 
 
 function get_login() {

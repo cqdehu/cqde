@@ -24,11 +24,12 @@ if ($checkResult->num_rows > 0) {
     // Regisztráció
     $insertUserSql = "INSERT INTO users (username, password) VALUES ('$regUsername', '$hashedPassword')";
     if ($conn->query($insertUserSql)) {
-        echo json_encode(['success' => true]);
+        echo json_encode(['success' => 'Sikeres regisztráció! Most már bejelentkezhetsz.']);
     } else {
         echo json_encode(['error' => 'Hiba történt a regisztráció során.']);
     }
 }
+
 
 $conn->close();
 ?>
