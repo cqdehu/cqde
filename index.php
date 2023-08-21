@@ -71,7 +71,7 @@ if (!isset($_SESSION["username"])) {
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
             ?>
-                    <div class="col p-0 m-0 image-container">
+                    <div class="col p-0 m-0">
                         <div class="card rounded-4 border-0 offer" id="<?php echo $row['id'] ?>">
                             <span class="position-relative"><span class="position-absolute top-0 end-0">
                                     <span class="badge rate-bg rate m-3 px-3 fs-6 rounded-4"><?php echo $row['rate'] ?></span>
