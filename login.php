@@ -9,6 +9,8 @@ $dbname = "u142909563_LEARN";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+$hiba_uzenet = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
