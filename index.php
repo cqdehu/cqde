@@ -42,7 +42,9 @@ if (!isset($_SESSION["username"])) {
                 <p class="p-0 m-0 fs-4 text-light"><?php echo ucfirst($_SESSION["username"]); ?></p>
             </div>
             <div class="col d-flex justify-content-end align-items-center p-0 m-0 text-end">
-                <img src="/src/profile.svg" alt="" height="20px">
+                <button class="btn">
+                    <img src="/src/profile.svg" alt="" height="20px">
+                </button>
             </div>
         </div>
     </header>
