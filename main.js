@@ -167,7 +167,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('#signup_button').click(function () {
-        
         var regUsername = $('#username_input').val();
         var regPassword = $('#password_input').val();
         
@@ -176,16 +175,17 @@ $(document).ready(function () {
             url: 'signup.php', // Regisztrációs PHP fájl
             data: { username: regUsername, password: regPassword },
             success: function (response) {
-                if (response.success) {
+                if (response.trim() === 'success') {
                     alert('Sikeres regisztráció! Most már bejelentkezhetsz.');
-                    get_login()
+                    get_login();
                 } else {
-                    alert('Hiba történt a regisztráció során: ' + response.error);
+                    alert('Hiba történt a regisztráció során: ' + response);
                 }
             }
         });
     });
 });
+
 
 function get_login() {
     $.ajax({
