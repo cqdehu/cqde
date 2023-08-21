@@ -6,6 +6,7 @@ if (!isset($_SESSION["username"])) {
     header("Location: index");
     exit(); // Fontos: Azonnal leállítjuk a további kód végrehajtását
 }
+//
 
 $servername = "localhost";
 $username = "u142909563_LEAdmin";

@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+
+// Ellenőrizzük, hogy a felhasználó be van-e jelentkezve
+if (!isset($_SESSION["username"])) {
+    header("Location: index");
+    exit(); // Fontos: Azonnal leállítjuk a további kód végrehajtását
+}
+//
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
