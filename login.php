@@ -34,24 +34,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Bejelentkezés</title>
-</head>
-
-<body>
-    <h2>Bejelentkezés</h2>
-    <?php if (isset($hiba_uzenet)) {
-        echo "<p>$hiba_uzenet</p>";
-    } ?>
-    <form action="login" method="post">
-        Felhasználónév: <input type="text" name="username"><br>
-        Jelszó: <input type="password" name="password"><br>
-        <input type="submit" value="Bejelentkezés">
-    </form>
-</body>
-
-</html>
