@@ -59,7 +59,7 @@ function get_offer() {
         type: "GET",
         url: "get_pre_offer.php",
         success: function (response) {
-            $('#offers').hide().html(response).fadeIn('slow');
+            
         }
     });
 };
