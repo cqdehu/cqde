@@ -143,7 +143,7 @@ $(document).ready(function () {
         var id = $(this).attr("id");
         console.log(id)
         $.ajax({
-            type: "POST",
+            type: "GET",
             url: "get_offer.php",
             data: { id: id },
             success: function (response) {
