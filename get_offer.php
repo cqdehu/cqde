@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
                     <div class="card rounded-0 border-0" id="<?php echo $row['id'] ?>">
                         <span class="position-relative">
                             <span class="position-absolute top-0 end-0">
-                                <span class="badge rate-bg rate m-4 px-3 fs-6 rounded-4"><?php echo $row['cost'] ?></span>
+                                <span class="badge rate-bg rate m-4 px-3 fs-6 rounded-4"><?php echo $row['rate'] ?></span>
                             </span>
                         </span>
                         <img src="/src/img.png" alt="" class=" border-0">
