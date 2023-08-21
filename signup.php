@@ -1,9 +1,9 @@
 <?php
 // Adatbázis kapcsolódás
 $servername = "localhost";
-$username = "felhasznalo";
-$password = "jelszo";
-$dbname = "adatbazis";
+$username = "u142909563_LEAdmin";
+$password = "LEadmin23";
+$dbname = "u142909563_LEARN";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -34,9 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Regisztráció</title>
 </head>
+
 <body>
     <h2>Regisztráció</h2>
     <form action="signup" method="post">
@@ -45,4 +47,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="submit" value="Regisztráció">
     </form>
 </body>
+
 </html>

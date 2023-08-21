@@ -3,9 +3,9 @@ session_start();
 
 // Adatbázis kapcsolódás
 $servername = "localhost";
-$username = "felhasznalo";
-$password = "jelszo";
-$dbname = "adatbazis";
+$username = "u142909563_LEAdmin";
+$password = "LEadmin23";
+$dbname = "u142909563_LEARN";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -33,16 +33,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Bejelentkezés</title>
 </head>
+
 <body>
     <h2>Bejelentkezés</h2>
-    <?php if (isset($hiba_uzenet)) { echo "<p>$hiba_uzenet</p>"; } ?>
+    <?php if (isset($hiba_uzenet)) {
+        echo "<p>$hiba_uzenet</p>";
+    } ?>
     <form action="login.php" method="post">
         Felhasználónév: <input type="text" name="username"><br>
         Jelszó: <input type="password" name="password"><br>
         <input type="submit" value="Bejelentkezés">
     </form>
 </body>
+
 </html>
