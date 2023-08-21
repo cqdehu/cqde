@@ -155,3 +155,7 @@ $(document).ready(function () {
 });
 //
 
+$(document).ready(function () {
+    $('#root').html()
+});
+
