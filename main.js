@@ -156,6 +156,11 @@ $(document).ready(function () {
 //
 
 $(document).ready(function () {
-    $('#root').html()
+    $.ajax({
+        type: "GET",
+        url: "login.php",
+        success: function (response) {
+            $('#root').html(response)
+        }
+    });
 });
-
