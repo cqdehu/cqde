@@ -154,13 +154,3 @@ $(document).ready(function () {
     });
 });
 //
-
-$(document).ready(function () {
-    $.ajax({
-        type: "GET",
-        url: "get_home.php",
-        success: function (response) {
-            $('#root').html(response)
-        }
-    });
-});
