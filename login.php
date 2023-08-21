@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Jelszó ellenőrzése
         if (password_verify($password, $hashedPassword)) {
             $_SESSION["username"] = $username;
-            header("Location: dashboard.php");
+            header("Location: dashboard");
         } else {
             $hiba_uzenet = "Hibás felhasználónév vagy jelszó.";
         }
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php if (isset($hiba_uzenet)) {
         echo "<p>$hiba_uzenet</p>";
     } ?>
-    <form action="login.php" method="post">
+    <form action="login" method="post">
         Felhasználónév: <input type="text" name="username"><br>
         Jelszó: <input type="password" name="password"><br>
         <input type="submit" value="Bejelentkezés">
