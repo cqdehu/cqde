@@ -32,7 +32,7 @@ $(document).ready(function () {
                     cost: cost
                 },
                 success: function (response) {
-                    get_offer_name();
+                    //get_offer_name();
                     toast(name + " ajánlat sikeresen létrehozva!", "success")
                 }
             });
