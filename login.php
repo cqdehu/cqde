@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <h2>Bejelentkezés</h2>
-    <?php echo "<p>hiba_uzenet</p>"; ?>
+    <?php echo "<p>$hiba_uzenet</p>"; ?>
     <form action="login" method="post">
         Felhasználónév: <input type="text" name="username"><br>
         Jelszó: <input type="password" name="password"><br>
