@@ -139,8 +139,7 @@ function toast(text, color) {
 
 // GET OFFER
 $(document).ready(function () {
-    $(document).on("click", ".offer", function () {
-        var id = $(this).attr("id");
+    var id = $(this).attr("id");
         console.log(id)
         $.ajax({
             type: "GET",
@@ -150,7 +149,5 @@ $(document).ready(function () {
                 $("#fseq").html(response)
             }
         });
-
-    });
 });
 //
