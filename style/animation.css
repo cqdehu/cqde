@@ -8,5 +8,5 @@
 }
 
 .image-container img {
-    animation: fadeIn 0.5s ease-in-out; /* Animáció hozzárendelése */
+    animation: fadeIn 0.9s ease-in-out; /* Animáció hozzárendelése */
 }
