@@ -25,7 +25,7 @@ if (!isset($_SESSION["username"])) {
     <link rel="stylesheet" href="/style/font.css">
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/animation.css">
-    <script src="main.js"></script>
+    <script src=""></script>
 </head>
 
 <body class="p-4 m-0">
