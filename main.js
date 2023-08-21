@@ -173,7 +173,7 @@ $(document).ready(function () {
         
         $.ajax({
             type: 'POST',
-            url: 'register.php', // Regisztrációs PHP fájl
+            url: 'signup.php', // Regisztrációs PHP fájl
             data: { username: regUsername, password: regPassword },
             success: function (response) {
                 if (response.success) {
