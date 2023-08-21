@@ -24,6 +24,7 @@ if (!isset($_SESSION["username"])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style/font.css">
     <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/animation.css">
     <script src="main.js"></script>
 </head>
 
@@ -68,7 +69,7 @@ if (!isset($_SESSION["username"])) {
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
             ?>
-                    <div class="col p-0 m-0">
+                    <div class="col p-0 m-0 image-container">
                         <div class="card rounded-4 border-0 offer" id="<?php echo $row['id'] ?>">
                             <span class="position-relative"><span class="position-absolute top-0 end-0">
                                     <span class="badge rate-bg rate m-3 px-3 fs-6 rounded-4"><?php echo $row['rate'] ?></span>
