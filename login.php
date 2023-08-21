@@ -1,7 +1,19 @@
 <?php
 session_start();
 
-// Adatbázis kapcsolódás és egyéb szükséges függvények
+// Adatbázis kapcsolódás
+$servername = "localhost";
+$username = "felhasznalo";
+$password = "jelszo";
+$dbname = "adatbazis";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Ellenőrizd, hogy a kapcsolat létrejött-e
+if ($conn->connect_error) {
+    die("Kapcsolódási hiba: " . $conn->connect_error);
+}
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
