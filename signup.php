@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h2>Regisztráció</h2>
-    <form action="registration.php" method="post">
+    <form action="signup.php" method="post">
         Felhasználónév: <input type="text" name="username"><br>
         Jelszó: <input type="password" name="password"><br>
         <input type="submit" value="Regisztráció">
