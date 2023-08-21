@@ -147,7 +147,7 @@ $(document).ready(function () {
             url: "get_offer.php",
             data: { id: id },
             success: function (response) {
-                $("#root").html(response)
+                $("#offer").html(response)
             }
         });
 
