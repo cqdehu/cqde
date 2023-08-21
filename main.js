@@ -139,7 +139,8 @@ function toast(text, color) {
 
 // GET OFFER
 $(document).ready(function () {
-    var id = "64e29c78b211f"
+    $(document).click(function() {
+        var id = $(this).attr("id");
         console.log(id)
         $.ajax({
             type: "POST",
@@ -149,5 +150,6 @@ $(document).ready(function () {
                 $("#fseq").html(response)
             }
         });
+    })
 });
 //
