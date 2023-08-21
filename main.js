@@ -139,7 +139,7 @@ function toast(text, color) {
 
 // GET OFFER
 $(document).ready(function () {
-    $(document).click(function() {
+    $(document).on("click", ".offer", function () {
         var id = $(this).attr("id");
         console.log(id)
         $.ajax({
@@ -150,6 +150,7 @@ $(document).ready(function () {
                 $("#fseq").html(response)
             }
         });
-    })
+
+    });
 });
 //
