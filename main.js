@@ -169,6 +169,8 @@ $(document).ready(function () {
     $('#signup_button').click(function () {
         var regUsername = $('#username_input').val();
         var regPassword = $('#password_input').val();
+
+        console.log(regPassword)
         
         $.ajax({
             type: 'POST',
