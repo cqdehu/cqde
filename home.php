@@ -49,7 +49,7 @@ if (!isset($_SESSION["username"])) {
     <!---->
     <main class="container mt-4">
         <div class="row gap-4 text-light" id="offers">
-            
+            <?php echo 'hello' ?>
         </div>
     </main>
     <!---->
