@@ -139,7 +139,7 @@ function toast(text, color) {
 
 // GET OFFER
 $(document).ready(function () {
-    var id = $(this).attr("id");
+    var id = "64e29c78b211f"
         console.log(id)
         $.ajax({
             type: "GET",
