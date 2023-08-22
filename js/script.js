@@ -20,7 +20,7 @@ $('#login_button').click(function() {
 
     $.ajax({
         type: "POST",
-        url: "login.php",
+        url: "/login.php",
         data: {
             username: username, password: password,
         },
