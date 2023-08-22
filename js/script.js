@@ -45,7 +45,7 @@ $('#login_button').click(function () {
     var username = $('#username_input').val()
     var password = $('#password_input').val()
 
-    if (username !== '' && password !== '') {
+    if (username !== '' || password !== '') {
         if (username === '') {
             toast('A felhasználónév mező kitöltése kötelező!', 'danger');
         } else {
