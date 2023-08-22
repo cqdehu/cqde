@@ -1,8 +1,12 @@
 <?php
 
-$text = isset($_POST['text']) ? htmlspecialchars($_POST['text']) : '';
-$id = isset($_POST['id']) ? htmlspecialchars($_POST['id']) : '';
-$color = isset($_POST['color']) ? htmlspecialchars($_POST['color']) : '';
+$text = $_POST['text'] ?? '';
+$id = $_POST['id'] ?? '';
+$color = $_POST['color'] ?? 'info';
+
+$text = htmlspecialchars($text);
+$id = htmlspecialchars($id);
+$color = htmlspecialchars($color);
 
 ?>
 
