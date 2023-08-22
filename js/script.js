@@ -68,7 +68,7 @@ $('#login_button').click(function() {
 $('#profile').click(function () { 
     $.ajax({
         type: "GET",
-        url: "logout.php",
+        url: "/logout.php",
         success: function (response) {
             if (response === 'success') {
                 window.location.href = '/index.php'
