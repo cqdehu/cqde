@@ -6,8 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $color = $_POST['color'] ?? 'info';
 }
 
-
-
 ?>
 
 <div class="toast rounded-bottom-4 rounded-top-5 border-0 bg-<?php echo $color ?>" id="<?php echo $id ?>" data-bs-delay="6000">

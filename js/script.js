@@ -46,6 +46,11 @@ $('#login_button').click(function () {
     var password = $('#password_input').val()
 
     if (username !== '' && password !== '') {
+        if (username === '') {
+            toast('A felhasználónév mező kitöltése kötelező!', 'danger');
+        } else {
+            toast('A jelszó mező kitöltése kötelező!', 'danger');
+        }
         $.ajax({
             type: "POST",
             url: "/login.php",
