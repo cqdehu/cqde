@@ -5,7 +5,7 @@ $('#profile').click(function () {
         url: "logout.php",
         success: function (response) {
             if (response === 'success') {
-                window.location.href = '/login.php'
+                window.location.href = '/index.php'
             }
         }
     });
