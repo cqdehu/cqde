@@ -3,6 +3,11 @@ $('#profile').click(function () {
     $.ajax({
         type: "GET",
         url: "logout.php",
+        success: function (response) {
+            if (response === 'success') {
+                window.location.href = '/login.php'
+            }
+        }
     });
 });
 
