@@ -9,6 +9,7 @@ $('#profile').click(function () {
 
 //LOGIN
 $('#login_page_button').click(function() {
+    console.log("dawd")
     $.ajax({
         type: "GET",
         url: "/pages/login.php",
