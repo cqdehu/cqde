@@ -10,7 +10,7 @@ $('#profile').click(function () {
 //LOGIN
 $('#login_page_button').click(function() {
     console.log("dawd")
-    window.location.href = 
+    window.location.href = '/pages/login.php'
 })
 
 $('#login_button').click(function() {
