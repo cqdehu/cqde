@@ -10,9 +10,7 @@ $('#profile').click(function () {
 //LOGIN
 $('#login_page_button').click(function() {
     console.log("dawd")
-    $('body').load('/pages/login.php', function() {
-        $(this).fadeIn();
-    })
+    window.location.href = 
 })
 
 $('#login_button').click(function() {

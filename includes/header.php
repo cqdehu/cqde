@@ -22,7 +22,7 @@ session_start();
             <?php endif; ?>
 
             <?php if (!isset($_SESSION['username'])) : ?>
-                <p class="p-0 m-0 text-light" id="login_page_button">Jelentkezz be!</p>
+                <a class="p-0 m-0 text-light" id="login_page_button">Jelentkezz be!</a>
             <?php endif; ?>
         </div>
 
