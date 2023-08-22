@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $db_host = "localhost";
@@ -26,12 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (password_verify($password, $hashedPassword)) {
             $_SESSION["username"] = $username;
-            echo "success";
-        } else {
-            echo "fail";
+            echo 'success';
         }
     }
 }
 
 $conn->close();
-?> 
+?>
