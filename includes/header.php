@@ -2,7 +2,7 @@
 session_start();
 ?>
 
-<header class="container">
+<header class="container bg-dark">
     <div class="row">
         <div class="col">
             Menu
@@ -16,7 +16,7 @@ session_start();
                         </p>
                     </div>
                     <div class="col">
-                        <img src="" alt="">
+                        <img src="../src/profile.svg" alt="">
                     </div>
                 </div>
             </div>
