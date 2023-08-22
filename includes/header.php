@@ -2,7 +2,7 @@
 session_start();
 ?>
 
-<header class="container bg-dark">
+<header class="container-fluid bg-dark">
     <div class="row">
         <div class="col">
             Menu
