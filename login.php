@@ -1,16 +1,7 @@
 <?php
 session_start();
 
-$db_host = "localhost";
-$db_user = "u142909563_LEAdmin";
-$db_pass = "LEadmin23";
-$db_name = "u142909563_LEARN";
-
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
-
-if ($conn->connect_error) {
-    die("Hiba a kapcsolódás során: " . $conn->connect_error);
-}
+include './config/db_config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
