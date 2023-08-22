@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["username"] = $username;
             echo "success";
         } else {
-            echo "faild";
+            echo "fail";
         }
     }
 }
