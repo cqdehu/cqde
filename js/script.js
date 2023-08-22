@@ -27,7 +27,7 @@ $('#login_button').click(function() {
             if (response === 'success') {
                 window.location.href = '/index.php'
             } else {
-                
+                console.log(response)
             }
         } 
     });
