@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <?php include './includes/toast_container.php' ?>
+    <?php include '/includes/toast_container.php' ?>
 
     <main class="container">
         <div class="row">
