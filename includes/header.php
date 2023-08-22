@@ -16,7 +16,7 @@ session_start();
                         </p>
                     </div>
                     <div class="col">
-                        <img src="../src/profile.svg" alt="">
+                        <img src="../src/profile.svg" alt="profile" id="profile">
                     </div>
                 </div>
             </div>
