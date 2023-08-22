@@ -18,6 +18,9 @@ $('#login_button').click(function() {
     $.ajax({
         type: "GET",
         url: "login.php",
+        success: function (response) {
+        console.log(response)
+        }
     });
 })
 
