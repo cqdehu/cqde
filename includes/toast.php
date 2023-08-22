@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $text = $_POST['text'];
 $id = $_POST['id'];
 $color = $_POST['color'];
