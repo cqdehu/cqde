@@ -14,7 +14,6 @@ $('#login_page_button').click(function() {
 })
 
 $('#login_button').click(function() {
-    console.log("dawd")
     var username = $('#username_input').val()
     var password = $('#password_input').val()
 
