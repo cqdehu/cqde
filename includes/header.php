@@ -2,7 +2,7 @@
 session_start();
 ?>
 
-<div class="container">
+<header class="container">
     <div class="row">
         <div class="col">
             Menu
@@ -22,4 +22,4 @@ session_start();
             </div>
         <?php endif; ?>
     </div>
-</div>
+</header>
