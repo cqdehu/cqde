@@ -25,7 +25,7 @@ $('#login_button').click(function() {
             username: username, password: password,
         },
         success: function (response) {
-            
+            console.log(response)
         }
     });
 })
