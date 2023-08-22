@@ -61,7 +61,7 @@ $('#login_button').click(function () {
                 },
                 success: function (response) {
                     if (response === 'success') {
-                        window.location.href = '/index';
+                        window.location.href = '/';
                     } else {
                         toast(response, 'danger');
                     }
@@ -86,7 +86,7 @@ $('#profile').click(function () {
         url: "/logout",
         success: function (response) {
             if (response === 'success') {
-                window.location.href = '/index'
+                window.location.href = '/'
             }
         }
     });
