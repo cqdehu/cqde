@@ -55,7 +55,7 @@ $('#login_button').click(function () {
         } else {
             $.ajax({
                 type: "POST",
-                url: "/login.php",
+                url: "/login",
                 data: {
                     username: username, password: password,
                 },
@@ -83,7 +83,7 @@ $('#login_button').click(function () {
 $('#profile').click(function () {
     $.ajax({
         type: "GET",
-        url: "/logout.php",
+        url: "/logout",
         success: function (response) {
             if (response === 'success') {
                 window.location.href = '/index'

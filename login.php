@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include './config/db_config.php';
+include './config/db_config';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
