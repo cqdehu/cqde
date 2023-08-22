@@ -10,13 +10,13 @@ $('#profile').click(function () {
 //LOGIN
 $('#login_page_button').click(function() {
     console.log("dawd")
-    $.ajax({
-        type: "GET",
-        url: "/pages/login.php",
-    });
+    $(body).load('/pages/login.php', function() {
+        $(this).fadeIn();
+    })
 })
 
 $('#login_button').click(function() {
+    console.log("dawd")
     $.ajax({
         type: "GET",
         url: "login.php",
