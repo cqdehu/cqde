@@ -11,7 +11,7 @@ $('#profile').click(function () {
 $('#login_page_button').click(function() {
     $.ajax({
         type: "GET",
-        url: "../pages/login.php",
+        url: "/pages/login.php",
     });
 })
 
