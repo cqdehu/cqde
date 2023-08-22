@@ -5,7 +5,7 @@ session_start();
 <header class="container bg-dark">
     <div class="row">
         <div class="col">
-            Menu
+            Men
         </div>
         <?php if (isset($_SESSION['username'])) : ?>
             <div class="col">
