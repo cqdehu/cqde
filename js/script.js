@@ -36,7 +36,7 @@ function toast(text, color) {
 
 //NAVIGATE TO LOGIN PAGE
 $('#login_page_button').click(function () {
-    window.location.href = '/pages/login'
+    window.location.href = fetch('/pages/login')
 })
 //
 
@@ -61,7 +61,7 @@ $('#login_button').click(function () {
                 },
                 success: function (response) {
                     if (response === 'success') {
-                        window.location.href = '/index';
+                        window.location.href = fetch('/index');
                     } else {
                         toast(response, 'danger');
                     }
@@ -86,7 +86,7 @@ $('#profile').click(function () {
         url: "/logout.php",
         success: function (response) {
             if (response === 'success') {
-                window.location.href = '/index'
+                window.location.href = fetch('/index')
             }
         }
     });
