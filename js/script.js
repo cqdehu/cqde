@@ -61,7 +61,7 @@ $('#login_button').click(function () {
             }
         });
     } else {
-
+        toast('Mezők kitöltése kötelező!','danger')
     }
 })
 //
