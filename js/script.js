@@ -17,6 +17,8 @@ function toast(text, color) {
             var toastId = "toast_" + toast_count;
 
             $('#' + toastId).toast('show');
+
+            console.log(":D")
         }
     });
 }
