@@ -9,7 +9,7 @@ function toast(text, color) {
 
     $.ajax({
         type: "POST",
-        url: "/includes/toast.php",
+        url: "/includes/toast",
         data: {
             text: text,
             id: "toast_" + toast_count,
