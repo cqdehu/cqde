@@ -1,38 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
-</head>
-<body>
+<?php
 
-    <?php include './includes/header.php' ?>
+session_start();
 
-    <main class="container">
-        <div class="row">
-            <div class="col">
-                <p class="p-0 m-0 fs-4">LOGIN</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <p class="p-0 m-0">USERNAME</p>
-                <input type="text" class="form-control" id="username_input">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <p class="p-0 m-0">PASSWORD</p>
-                <input type="password" class="form-control" id="password_input">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-dark" id="login_button" >LOGIN</button>
-            </div>
-        </div>
-    </main>
+include './config/db_config.php';
 
-</body>
-</html>
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $sql = "SELECT password FROM users WHERE username = '$username'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        $hashedPassword = $row["password"];
+
+        if (password_verify($password, $hashedPassword)) {
+            $_SESSION["username"] = $username;
+            header("Location: index.php");
+        }
+    }
+}
