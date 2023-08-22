@@ -1,0 +1,47 @@
+body {
+    background: #0B2820;
+}
+
+.full-width-header img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra spacing below image */
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.card, .toast-header {
+    background: #071813;
+}
+
+.name {
+    color: #34B894;
+}
+
+.price {
+    color: #FBFEFD;
+}
+
+.location {
+    color: #9CE3D0;
+}
+
+.area {
+    color: #34B894;
+}
+
+.rate-bg {
+    background: #071813;
+}
+
+.rate {
+    color: #34B894;
+}
+
+.btn-outline-light:hover {
+    background:#071813
+}
