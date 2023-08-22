@@ -4,7 +4,6 @@ SetEnv DB_PASS "LEadmin23"
 SetEnv DB_NAME "u142909563_LEARN"
 
 
-RewriteEngine On 
-RewriteCond %{REQUEST_FILENAME} !-d 
-RewriteCond %{REQUEST_FILENAME}.php -f 
-RewriteRule ^([^\.]+)/?$ $1.php [L] 
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*.php$ %{REQUEST_FILENAME}.php [QSA,L] 
