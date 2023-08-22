@@ -1,8 +1,8 @@
 <?php
-$db_host = $_ENV['DB_HOST'];
-$db_user = $_ENV['DB_USER'];
-$db_pass = $_ENV['DB_PASS'];
-$db_name = $_ENV['DB_NAME'];
+$db_host = $_SERVER['DB_HOST'];
+$db_user = $_SERVER['DB_USER'];
+$db_pass = $_SERVER['DB_PASS'];
+$db_name = $_SERVER['DB_NAME'];
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
