@@ -1,12 +1,12 @@
 <?php
 
-$text = $_POST['text'] ?? '';
-$id = $_POST['id'] ?? '';
-$color = $_POST['color'] ?? 'info';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $text = $_POST['text'] ?? '';
+    $id = $_POST['id'] ?? '';
+    $color = $_POST['color'] ?? 'info';
+}
 
-$text = htmlspecialchars($text);
-$id = htmlspecialchars($id);
-$color = htmlspecialchars($color);
+
 
 ?>
 
@@ -15,6 +15,6 @@ $color = htmlspecialchars($color);
         <strong class="me-auto name">SYSTEM</strong>
     </div>
     <div class="toast-body price">
-        <?php echo $text?>
+        <?php echo $text ?>
     </div>
 </div>
