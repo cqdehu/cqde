@@ -9,7 +9,7 @@ session_start();
         </div>
         <?php if (isset($_SESSION['username'])) : ?>
             <div class="col">
-                <div class="row">
+                <div class="row d-flex">
                     <div class="col">
                         <p>
                             <?php echo ucfirst($_SESSION['username']); ?>
