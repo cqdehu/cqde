@@ -5,10 +5,10 @@ session_start();
 <header class="container-fluid bg-dark">
     <div class="row">
         <div class="col">
-            Menu
+            <p class="p-0 m-0 text-light" id="">Menu</p>
         </div>
-        <?php if (isset($_SESSION['username'])) : ?>
-            <div class="col">
+        <div class="col">
+            <?php if (isset($_SESSION['username'])) : ?>
                 <div class="row d-flex">
                     <div class="col">
                         <p>
@@ -19,7 +19,15 @@ session_start();
                         <img src="../src/profile.svg" alt="profile" id="profile">
                     </div>
                 </div>
-            </div>
-        <?php endif; ?>
+            <?php endif; ?>
+
+            <?php if (!isset($_SESSION['username'])) : ?>
+                <p class="p-0 m-0 text-light" id="login_button">Jelentkezz be!</p>
+            <?php endif; ?>
+        </div>
+
+
+
+
     </div>
 </header>
