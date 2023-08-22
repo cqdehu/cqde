@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $hashedPassword)) {
             $_SESSION["username"] = $username;
             header("Location: /index.php");
+            exit()
         }
     }
 }
