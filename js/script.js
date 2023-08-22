@@ -46,28 +46,32 @@ $('#login_button').click(function () {
     var password = $('#password_input').val()
 
     if (username !== '' || password !== '') {
-        if (username === '') {
-            toast('A felhasználónév mező kitöltése kötelező!', 'danger');
-        } else {
-            toast('A jelszó mező kitöltése kötelező!', 'danger');
-        }
-        $.ajax({
-            type: "POST",
-            url: "/login.php",
-            data: {
-                username: username, password: password,
-            },
-            success: function (response) {
-                if (response === 'success') {
-                    window.location.href = '/index.php'
-                } else {
-                    toast(response, 'danger')
-                }
+        if (username === '' || password === '') {
+            if (username === '') {
+                toast('A felhasználónév mező kitöltése kötelező!', 'danger');
+            } else {
+                toast('A jelszó mező kitöltése kötelező!', 'danger');
             }
-        });
+        } else {
+            $.ajax({
+                type: "POST",
+                url: "/login.php",
+                data: {
+                    username: username, password: password,
+                },
+                success: function (response) {
+                    if (response === 'success') {
+                        window.location.href = '/index.php';
+                    } else {
+                        toast(response, 'danger');
+                    }
+                }
+            });
+        }
     } else {
-        toast('A mezők kitöltése kötelező!','danger')
+        toast('A mezők kitöltése kötelező!', 'danger');
     }
+    
 })
 //
 
