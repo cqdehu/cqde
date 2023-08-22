@@ -6,5 +6,5 @@ session_unset();
 session_destroy();
 
 // Átirányítás a bejelentkezési oldalra
-header("Location: index");
+header("Location: index.php");
 ?>
