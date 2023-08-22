@@ -2,10 +2,10 @@
 
 session_start();
 
-$db_host = $_SERVER['DB_HOST'];
-$db_user = $_SERVER['DB_USER'];
-$db_pass = $_SERVER['DB_PASS'];
-$db_name = $_SERVER['DB_NAME'];
+$db_host = "localhost";
+$db_user = "u142909563_LEAdmin";
+$db_pass = "LEadmin23";
+$db_name = "u142909563_LEARN";
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
