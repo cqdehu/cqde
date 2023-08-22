@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["username"] = $username;
             echo 'success';
         } else {
-            echo 'failed';
+            echo 'Hibás jelszó!';
         }
     } else {
         echo 'Nincs ilyen felhasználó!';
